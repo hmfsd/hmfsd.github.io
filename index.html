@@ -145,8 +145,7 @@
 
           const url = 'https://docs.google.com/forms/d/e/1FAIpQLScz7_uxihDpYcLDZgiRwHGvA7FU0_AicRPHtonQTWwwM5RbDw/formResponse';
           const data = new URLSearchParams();
-          data.append('entry.1768444202', name);
-          data.append('entry.916462060', email);
+          data.append('entry.916462060', name);
           data.append('emailAddress', email);
 
           fetch(url, { method: 'POST', mode: 'no-cors', body: data })
