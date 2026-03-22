@@ -105,6 +105,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ----------------------------------------------------------
+     BLOG PAGE — Initialize if #blog-page exists
+     ---------------------------------------------------------- */
+
+  if (document.getElementById('blog-page')) {
+    initBlogPage();
+  }
+
+  /* ----------------------------------------------------------
      PHOTOS PAGE — Initialize if #photos-page exists
      ---------------------------------------------------------- */
 
@@ -373,6 +381,63 @@ document.addEventListener('DOMContentLoaded', () => {
           <h3 class="card--guest__name">${guest.name}</h3>
           ${guest.credential ? guest.credential.split(' · ').map(c => `<p class="card--guest__credential">${c}</p>`).join('') : ''}
           <p class="card--guest__bio">${guest.bio}</p>
+        </div>
+      </div>
+    `;
+  }
+
+  /* ----------------------------------------------------------
+     initBlogPage — Load posts and render them
+     ---------------------------------------------------------- */
+
+  async function initBlogPage() {
+    try {
+      const posts = await fetchJSON('data/posts.json');
+      const container = document.getElementById('blog-posts');
+      if (!container) return;
+
+      if (posts.length === 0) {
+        container.innerHTML = '<p style="color:var(--text-muted);text-align:center;">No posts yet. Check back soon!</p>';
+        return;
+      }
+
+      // Sort newest first
+      posts.sort((a, b) => b.dateISO.localeCompare(a.dateISO));
+      container.innerHTML = posts.map((post) => renderBlogPost(post)).join('');
+      observeNewFadeIns(container);
+    } catch (err) {
+      console.error('Failed to load blog posts:', err);
+    }
+  }
+
+  /* ----------------------------------------------------------
+     renderBlogPost — Blog post card with expand/collapse
+     ---------------------------------------------------------- */
+
+  function renderBlogPost(post) {
+    return `
+      <div class="card card--blog fade-in" style="margin-bottom:16px;">
+        ${post.image ? `<img class="card--blog__image" src="${post.image}" alt="${post.title}" loading="lazy" />` : ''}
+        <div class="card--blog__content">
+          <p class="card--blog__date">${post.date}</p>
+          <h3 class="card--blog__title">${post.title}</h3>
+          <p class="card--blog__excerpt">${post.excerpt}</p>
+          <div class="card--blog__body" style="display:none;">
+            <p>${post.body}</p>
+          </div>
+          <button class="card--blog__toggle" onclick="
+            const body = this.previousElementSibling;
+            const excerpt = this.previousElementSibling.previousElementSibling;
+            if (body.style.display === 'none') {
+              body.style.display = 'block';
+              excerpt.style.display = 'none';
+              this.textContent = 'Close ↑';
+            } else {
+              body.style.display = 'none';
+              excerpt.style.display = 'block';
+              this.textContent = 'Read more ↓';
+            }
+          ">Read more ↓</button>
         </div>
       </div>
     `;

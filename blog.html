@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photos | House Music Fridays</title>
+  <title>Blog | House Music Fridays</title>
   <meta name="description" content="House Music Fridays at Air Conditioned Lounge — San Diego's home for deep, jackin & soulful house every Friday night.">
-  <meta property="og:title" content="House Music Fridays">
-  <meta property="og:description" content="10 years of exceptional house music every Friday at Air Conditioned Lounge, San Diego.">
+  <meta property="og:title" content="House Music Fridays — Blog">
+  <meta property="og:description" content="Recaps, announcements, and stories from the dancefloor.">
   <meta property="og:image" content="assets/logos/hmf-logo.png">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,13 +27,12 @@
       <a href="about.html" class="nav__link">About</a>
       <a href="residents.html" class="nav__link">Residents</a>
       <a href="guests.html" class="nav__link">Guest DJs</a>
-      <a href="photos.html" class="nav__link active">Photos</a>
+      <a href="photos.html" class="nav__link">Photos</a>
       <a href="mixes.html" class="nav__link">Mixes</a>
-      <a href="blog.html" class="nav__link">Blog</a>
+      <a href="blog.html" class="nav__link active">Blog</a>
       <a href="connect.html" class="nav__link">Connect</a>
-    
     </div>
-    <button class="nav__hamburger" aria-label="Menu">
+    <button class="nav__hamburger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -43,47 +42,35 @@
     <a href="about.html" class="nav__link">About</a>
     <a href="residents.html" class="nav__link">Residents</a>
     <a href="guests.html" class="nav__link">Guest DJs</a>
-    <a href="photos.html" class="nav__link active">Photos</a>
+    <a href="photos.html" class="nav__link">Photos</a>
     <a href="mixes.html" class="nav__link">Mixes</a>
-    <a href="blog.html" class="nav__link">Blog</a>
+    <a href="blog.html" class="nav__link active">Blog</a>
     <a href="connect.html" class="nav__link">Connect</a>
-  
   </div>
 
-  <div id="photos-page">
-
-    <div class="page-header">
-      <div class="container">
-        <h1 class="page-header__title">Photos</h1>
-        <p class="page-header__subtitle">Moments from the dancefloor. Photos by Demarkus Lewis.</p>
-      </div>
+  <div id="blog-page">
+    <div class="page-header container">
+      <h1 class="page-header__title">Blog</h1>
+      <p class="page-header__subtitle">Recaps, announcements, and stories from the dancefloor.</p>
     </div>
 
     <div class="section">
-      <div class="gallery">
-        <div class="gallery__preview-wrap">
-          <div class="gallery__preview"></div>
-          <div class="gallery__arrows">
-            <button class="gallery__arrow gallery__arrow--prev" aria-label="Previous photo">&#9664;</button>
-            <button class="gallery__arrow gallery__arrow--next" aria-label="Next photo">&#9654;</button>
-          </div>
-        </div>
-        <div class="gallery__grid"></div>
+      <div id="blog-posts">
+        <!-- JS populates from data/posts.json -->
       </div>
     </div>
-
   </div>
 
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__info">
-        <img src="assets/logos/ac-lounge-logo.png" alt="AC Lounge" style="height:20px;margin-right:8px;vertical-align:middle;opacity:0.5;">
+        <img src="assets/logos/ac-lounge-logo.png" alt="Air Conditioned Lounge">
         4673 30th St · San Diego, CA 92116 · Every Friday 9PM–2AM
       </div>
       <div class="footer__links">
-        <a href="https://instagram.com/housemusicfridays" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.facebook.com/og.matthewBrian" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://ra.co/promoters/160137" target="_blank" rel="noopener">Resident Advisor</a>
+        <a href="https://instagram.com/housemusicfridays" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/og.matthewBrian" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://ra.co/promoters/160137" target="_blank" rel="noopener noreferrer">RA</a>
       </div>
     </div>
   </footer>
