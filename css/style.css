@@ -1,0 +1,1130 @@
+/* ============================================================
+   House Music Fridays — Main Stylesheet
+   Air Conditioned Lounge, San Diego
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. Custom Properties
+   ------------------------------------------------------------ */
+:root {
+  --bg-deep: #0a0a0f;
+  --bg-section: #0e0e13;
+  --bg-card: #1d1d22;
+  --bg-hover: #2a2a35;
+  --border: rgba(255, 255, 255, 0.06);
+  --accent: #c8a86e;
+  --accent-hover: #dbbe85;
+  --text-primary: #f0f0f5;
+  --text-body: #c2c2d0;
+  --text-muted: #8888a5;
+  --text-dim: #6e6e8a;
+  --text-faint: #4a4a60;
+}
+
+/* ------------------------------------------------------------
+   2. Reset & Base Styles
+   ------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg-deep);
+  color: var(--text-body);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ------------------------------------------------------------
+   3. Nav Styles
+   ------------------------------------------------------------ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.nav--transparent {
+  background: transparent;
+}
+
+.nav--solid {
+  background: var(--bg-deep);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.nav__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav__logo img {
+  height: 32px;
+  width: auto;
+}
+
+.nav__logo img.nav__hmf-logo {
+  height: 36px;
+}
+
+.nav__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.nav__links a {
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.nav__links a:hover,
+.nav__links a.active {
+  color: var(--text-primary);
+}
+
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.nav__hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--text-body);
+  border-radius: 1px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Mobile nav overlay */
+.nav__mobile {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: var(--bg-deep);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.nav__mobile.active {
+  display: flex;
+}
+
+.nav__mobile a {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.nav__mobile a:hover,
+.nav__mobile a.active {
+  color: var(--text-primary);
+}
+
+/* ------------------------------------------------------------
+   4. Hero Section
+   ------------------------------------------------------------ */
+.hero {
+  position: relative;
+  background: var(--bg-deep);
+  padding-top: 80px;
+  padding-bottom: 16px;
+}
+
+.hero__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px clamp(1.5rem, 4vw, 3rem) 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.hero__content {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.hero__logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.hero__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.hero__subtitle {
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.hero__tagline {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-top: 6px;
+}
+
+.hero__tagline-big {
+  font-size: clamp(15px, 2vw, 20px);
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+.hero__address {
+  font-size: clamp(13px, 1.5vw, 16px);
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.hero__video-wrap {
+  width: 100%;
+  max-width: 420px;
+}
+
+.hero__video {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.hero__overlay {
+  display: none;
+}
+
+/* ------------------------------------------------------------
+   5. Section Styles
+   ------------------------------------------------------------ */
+.section {
+  padding: clamp(1.25rem, 3vw, 2rem) clamp(1.5rem, 4vw, 3rem);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section--alt {
+  background: var(--bg-section);
+}
+
+/* When section--alt is used, the section inside needs full width background */
+.section--alt .section {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.section__label {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.section__title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+/* ------------------------------------------------------------
+   6. Card Components
+   ------------------------------------------------------------ */
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Bio card */
+.card--bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card--bio__photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.card--bio__name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.card--bio__role {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+}
+
+.card--bio__text {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.card--bio__expand {
+  font-size: 12px;
+  color: var(--accent);
+  cursor: pointer;
+  margin-top: 12px;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+.card--bio__expand:hover {
+  color: var(--accent-hover);
+}
+
+.card--bio__full {
+  display: none;
+}
+
+.card--bio.expanded .card--bio__full {
+  display: block;
+}
+
+/* Event card */
+.card--event {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+}
+
+/* Social card */
+.card--social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.card--social:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Explore card */
+/* Guest card */
+.card--guest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card--guest__photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.card--guest__name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.card--guest__credential {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+}
+
+.card--guest__bio {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Bio card text */
+.card--bio__short {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+.card--bio__full {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  text-align: left;
+}
+
+.card--bio__discography {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.card--bio__discography li {
+  font-size: 12px;
+  color: var(--text-dim);
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Event card elements */
+.card--event__flyer {
+  width: 320px;
+  height: 320px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.card--event__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.card--event__date {
+  font-size: 20px;
+  color: var(--text-body);
+  margin-bottom: 4px;
+}
+
+.card--event__venue {
+  font-size: 16px;
+  color: var(--text-dim);
+}
+
+.card--event__links {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.upcoming-event__flyer {
+  width: 320px;
+  height: 320px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.upcoming-event__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.upcoming-event__date {
+  font-size: 20px;
+  color: var(--text-body);
+  margin-bottom: 4px;
+}
+
+.upcoming-event__venue {
+  font-size: 16px;
+  color: var(--text-dim);
+}
+
+/* Explore card */
+.card--explore {
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.card--explore:hover {
+  background: var(--bg-hover);
+}
+
+/* ------------------------------------------------------------
+   7. Button Styles
+   ------------------------------------------------------------ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-family: inherit;
+  color: var(--text-body);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ------------------------------------------------------------
+   8. Gallery Styles
+   ------------------------------------------------------------ */
+.gallery {
+  position: relative;
+}
+
+.gallery__preview {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.gallery__preview--square {
+  aspect-ratio: 1;
+  max-width: 65%;
+}
+
+.gallery__preview--square img {
+  object-fit: contain;
+}
+
+.gallery__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.5s ease;
+}
+
+.gallery__preview-wrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 700px;
+}
+
+.gallery__arrows {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.gallery__arrow,
+.gallery__arrow--prev,
+.gallery__arrow--next {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+  font-size: 24px;
+  transition: background 0.2s ease;
+}
+
+.gallery__arrow:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.gallery__thumb {
+  aspect-ratio: 1;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.gallery__thumb.active {
+  opacity: 1;
+  border-color: var(--accent);
+}
+
+.gallery__thumb:hover {
+  opacity: 0.85;
+}
+
+.gallery__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.gallery__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-faint);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.gallery__dot.active {
+  background: var(--text-primary);
+}
+
+/* ------------------------------------------------------------
+   9. Lightbox Styles
+   ------------------------------------------------------------ */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox__img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.lightbox__close:hover {
+  opacity: 0.7;
+}
+
+.lightbox__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  transition: background 0.2s ease;
+}
+
+.lightbox__arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox__arrow--prev {
+  left: 20px;
+}
+
+.lightbox__arrow--next {
+  right: 20px;
+}
+
+.lightbox__image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------------------------------------------------------------
+   10. Grid Layouts
+   ------------------------------------------------------------ */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.grid-explore {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+/* ------------------------------------------------------------
+   11. Connect Page
+   ------------------------------------------------------------ */
+.connect-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.social-icon--ig {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+}
+
+.social-icon--fb {
+  background: #1877f2;
+}
+
+.social-icon--ra {
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.map-embed {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+/* ------------------------------------------------------------
+   12. Mixes Page
+   ------------------------------------------------------------ */
+.soundcloud-embed {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+/* ------------------------------------------------------------
+   13. Footer
+   ------------------------------------------------------------ */
+.footer {
+  background: #08080c;
+  padding: 40px clamp(1.5rem, 4vw, 3rem);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer__info {
+  font-size: 16px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer__info img {
+  height: 36px !important;
+  opacity: 0.7 !important;
+}
+
+.footer__links {
+  display: flex;
+  gap: 24px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.footer__links a {
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.footer__links a:hover {
+  color: var(--accent);
+}
+
+/* ------------------------------------------------------------
+   14. Scroll Animations
+   ------------------------------------------------------------ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ------------------------------------------------------------
+   15. Utility Classes
+   ------------------------------------------------------------ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 4vw, 3rem);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 8px;
+}
+
+.mb-2 {
+  margin-bottom: 16px;
+}
+
+.mb-3 {
+  margin-bottom: 24px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ------------------------------------------------------------
+   16. Page Header
+   ------------------------------------------------------------ */
+.page-header {
+  padding-top: 80px;
+  padding-bottom: 12px;
+}
+
+.page-header__title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.page-header__subtitle {
+  font-size: 17px;
+  color: var(--text-muted);
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* ------------------------------------------------------------
+   17. HMF Description Card (Residents Page)
+   ------------------------------------------------------------ */
+.hmf-card {
+  background: rgba(255, 255, 255, 0.02);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 28px;
+}
+
+.hmf-card__logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ------------------------------------------------------------
+   18. Mini Gallery (Home Page)
+   ------------------------------------------------------------ */
+.mini-gallery {
+  display: flex;
+  gap: 12px;
+}
+
+.mini-gallery__main {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 16 / 10;
+}
+
+.mini-gallery__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mini-gallery__thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 140px;
+}
+
+.mini-gallery__thumb {
+  width: 140px;
+  height: 90px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.mini-gallery__thumb:hover {
+  opacity: 0.8;
+}
+
+.mini-gallery__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   19. Responsive Breakpoints
+   ============================================================ */
+
+/* --- Mobile (default): columns collapse to 1 --- */
+/* Already set as defaults above */
+
+/* Hamburger shown on mobile */
+@media (max-width: 1023px) {
+  .nav__links {
+    display: none;
+  }
+
+  .nav__hamburger {
+    display: flex;
+  }
+
+  .gallery__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --- Tablet (768px and up) --- */
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-explore {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .connect-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero__inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .hero__content {
+    text-align: left;
+    flex: 1;
+  }
+
+  .hero__logos {
+    justify-content: flex-start;
+  }
+
+  .hero__video-wrap {
+    max-width: 400px;
+  }
+
+  .hmf-card {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hmf-card__logo {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* --- Desktop (1024px and up) --- */
+@media (min-width: 1024px) {
+  .nav__links {
+    display: flex;
+  }
+
+  .nav__hamburger {
+    display: none;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-explore {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery__grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

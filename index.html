@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House Music Fridays | Air Conditioned Lounge</title>
+  <meta name="description" content="House Music Fridays at Air Conditioned Lounge — San Diego's home for deep, jackin & soulful house every Friday night.">
+  <meta property="og:title" content="House Music Fridays">
+  <meta property="og:description" content="10 years of exceptional house music every Friday at Air Conditioned Lounge, San Diego.">
+  <meta property="og:image" content="assets/logos/hmf-logo.png">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       Nav (transparent mode — becomes solid on scroll via nav.js)
+       ============================================================ -->
+  <nav class="nav nav--transparent">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/logos/ac-lounge-logo.png" alt="Air Conditioned Lounge">
+      <img src="assets/logos/hmf-logo.png" alt="HMF" class="nav__hmf-logo">
+    </a>
+
+    <div class="nav__links">
+      <a href="index.html" class="nav__link active">Home</a>
+      <a href="about.html" class="nav__link">About</a>
+      <a href="residents.html" class="nav__link">Residents</a>
+      <a href="guests.html" class="nav__link">Guest DJs</a>
+      <a href="events.html" class="nav__link">Events</a>
+      <a href="photos.html" class="nav__link">Photos</a>
+      <a href="mixes.html" class="nav__link">Mixes</a>
+      <a href="connect.html" class="nav__link">Connect</a>
+    
+    </div>
+
+    <button class="nav__hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav__mobile">
+    <a href="index.html" class="nav__link active">Home</a>
+    <a href="about.html" class="nav__link">About</a>
+    <a href="residents.html" class="nav__link">Residents</a>
+    <a href="guests.html" class="nav__link">Guest DJs</a>
+    <a href="events.html" class="nav__link">Events</a>
+    <a href="photos.html" class="nav__link">Photos</a>
+    <a href="mixes.html" class="nav__link">Mixes</a>
+    <a href="connect.html" class="nav__link">Connect</a>
+  
+  </div>
+
+  <!-- ============================================================
+       Hero Section
+       ============================================================ -->
+  <section class="hero">
+    <div class="hero__inner">
+      <div class="hero__content">
+        <div class="hero__logos">
+          <img src="assets/logos/hmf-logo.png" alt="House Music Fridays" style="height:120px;">
+          <img src="assets/logos/ac-lounge-logo.png" alt="Air Conditioned Lounge" style="height:100px;">
+        </div>
+        <h1 class="hero__title">House Music Fridays</h1>
+        <p class="hero__subtitle">at Air Conditioned Lounge</p>
+        <p class="hero__tagline-big">Every Friday · 9 PM – 2 AM</p>
+        <p class="hero__address">4673 30th St · San Diego, CA 92116</p>
+      </div>
+      <div class="hero__video-wrap">
+        <video class="hero__video" src="assets/video/hmf-hero.mp4" poster="assets/video/hmf-poster.jpg" autoplay muted loop playsinline></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Upcoming Event
+       ============================================================ -->
+  <div class="section--alt">
+    <div class="section fade-in">
+      <p class="section__label">Next Event</p>
+      <div class="upcoming-event" id="upcoming-event" style="display:none;">
+        <!--
+          JS (main.js) populates this section from data/events.json.
+          Expected structure:
+          <div class="card card--event">
+            <img class="upcoming-event__flyer" src="" alt="" />
+            <div>
+              <h3 class="upcoming-event__title"></h3>
+              <p class="upcoming-event__date"></p>
+              <p class="upcoming-event__venue"></p>
+              <a class="upcoming-event__fb btn" href="" target="_blank" rel="noopener noreferrer">Facebook Event</a>
+              <a class="upcoming-event__ra btn" href="" target="_blank" rel="noopener noreferrer">Resident Advisor</a>
+            </div>
+          </div>
+        -->
+        <div class="card card--event">
+          <img class="upcoming-event__flyer" src="" alt="" loading="lazy" />
+          <div>
+            <h3 class="upcoming-event__title"></h3>
+            <p class="upcoming-event__date"></p>
+            <p class="upcoming-event__venue"></p>
+            <div style="display:flex;gap:8px;margin-top:12px;">
+              <a class="upcoming-event__fb btn" href="#" target="_blank" rel="noopener noreferrer" style="display:none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px;flex-shrink:0;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook Event</a>
+              <a class="upcoming-event__ra btn" href="#" target="_blank" rel="noopener noreferrer" style="display:none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px;flex-shrink:0;"><text x="2" y="17" font-size="14" font-weight="700" font-family="Arial,sans-serif">RA</text></svg>Resident Advisor</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       Photos Mini Gallery
+       ============================================================ -->
+  <div class="section fade-in">
+    <p class="section__label">Photos <a href="photos.html" style="margin-left:8px;font-size:11px;">View Gallery →</a></p>
+    <div class="home-gallery" style="position:relative;">
+      <div class="mini-gallery">
+        <div class="mini-gallery__main">
+          <div class="gallery__preview"></div>
+          <div class="gallery__dots"></div>
+        </div>
+        <div class="mini-gallery__thumbs">
+          <div class="gallery__grid"></div>
+        </div>
+      </div>
+      <div class="gallery__arrows">
+        <button class="gallery__arrow gallery__arrow--prev" aria-label="Previous">&#9664;</button>
+        <button class="gallery__arrow gallery__arrow--next" aria-label="Next">&#9654;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       Mixes Teaser
+       ============================================================ -->
+  <div class="section--alt">
+    <div class="section fade-in">
+      <p class="section__label">Latest Mixes <a href="mixes.html" style="margin-left:8px;font-size:11px;">Full Playlist →</a></p>
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/eric-leonardis/sets/hmf-aclounge&color=%23c8a86e&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false" style="border-radius:8px;"></iframe>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       Explore Cards
+       ============================================================ -->
+  <div class="section fade-in">
+    <p class="section__label">Explore</p>
+    <div class="grid-explore">
+      <a href="about.html" class="card card--explore">
+        <h3 style="color:var(--text-primary);font-size:16px;font-weight:600;">About</h3>
+        <p style="color:var(--text-muted);font-size:13px;margin-top:4px;">Our story & residents</p>
+      </a>
+      <a href="guests.html" class="card card--explore">
+        <h3 style="color:var(--text-primary);font-size:16px;font-weight:600;">Guest DJs</h3>
+        <p style="color:var(--text-muted);font-size:13px;margin-top:4px;">Legends who've played</p>
+      </a>
+      <a href="events.html" class="card card--explore">
+        <h3 style="color:var(--text-primary);font-size:16px;font-weight:600;">Events &amp; Flyers</h3>
+        <p style="color:var(--text-muted);font-size:13px;margin-top:4px;">10 years of artwork</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__info">
+        <img src="assets/logos/ac-lounge-logo.png" alt="Air Conditioned Lounge" style="height:20px;display:inline-block;vertical-align:middle;margin-right:8px;">
+        4673 30th St · San Diego, CA 92116 · Every Friday 9PM–2AM
+      </div>
+      <div class="footer__links">
+        <a href="https://instagram.com/housemusicfridays" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/og.matthewBrian" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://ra.co/promoters/160137" target="_blank" rel="noopener noreferrer">RA</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

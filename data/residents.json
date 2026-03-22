@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Matthew Brian",
+    "role": "Host & Founder",
+    "photo": "assets/img/bios/matthew_brian.jpg",
+    "shortBio": "Matthew Brian is a DJ, producer, & remixer based out of San Diego, CA. He is resident DJ & Founder of House Music Fridays at Air Conditioned Lounge.",
+    "fullBio": "DJ and Producer Matthew Brian began his successful musical trajectory in modest clubs in the Southern U.S. in 1994, and followed his exceptional passion for house music by playing clubs throughout the nation. While working in Kansas City at DeepFixRecords.com and Frisky, he worked with and played alongside some of the thoroughbreds in the music industry whose talents he continues to support and admire: Derrick Carter, Luke Solomon, Mark Farina, Diz, Wally Callerio, DJ Sneak, Hector Moralez, DJ Heather, Miles Maeda, and others. His own music has appeared on labels like 1200 Traxx, Sampled Detroit, Kolour Recordings, and Greenhouse Recordings. Matthew is currently resident DJ for The A/C Lounge in San Diego, California, and regularly guests across the U.S.",
+    "discography": [
+      "Imaani Brown \"I'm Just A Man\" Matthew Brian Dub - HEAVY",
+      "Matthew Brian \"What Matters EP\" - Marinated Music",
+      "Matthew Brian \"Look At Me EP\" - Jump Recordings",
+      "The Stoned \"Oh Honey\" Matthew Brian Remix - Marinated Music",
+      "Matthew Brian \"Save The World EP\" - Kolour Recordings",
+      "Matthew Brian \"Close To Home EP\" - DOIN WORK Records",
+      "Matthew Brian \"La Chancla EP\" - 1200 Traxx",
+      "Matthew Brian \"Glassy Eyed EP\" - Greenhouse Recordings"
+    ]
+  },
+  {
+    "name": "Jesse Austin",
+    "role": "Resident",
+    "photo": "assets/img/bios/jesse_austin.jpg",
+    "shortBio": "San Diego-based DJ, music producer, and resident with House Music Fridays at the Air Conditioned Lounge.",
+    "fullBio": "Jesse Austin is a San Diego-based DJ, music producer, and resident with House Music Fridays at the Air Conditioned Lounge. Hailing from Rochester, NY, Jesse honed his craft in the underground party and club scene of upstate New York, developing a sharp selector's intuition and a dancefloor-first approach. Whether he's setting the tone early or pushing the room into peak hours, Jesse delivers high-quality mixing that keeps the floor locked in all night. When he's not in the booth, he's also one of the owners of Powerhaus Wholesome Pizza & Eats, bringing the same consistency and good energy to the community that he brings to the dancefloor."
+  },
+  {
+    "name": "Eric Leonardis",
+    "role": "Resident",
+    "photo": "assets/img/bios/eric_leonardis.jpg",
+    "shortBio": "San Diego-based scientist and DJ blending deep, soulful house with mind-bending acid energy.",
+    "fullBio": "Dr. Eric Leonardis is a San Diego-based scientist and DJ blending deep, soulful house with mind-bending acid energy. He's a resident with House Music Fridays at The Air Conditioned Lounge and has supported artists including Mark E. Quark, Miles Maeda, Mimi Raza, Duke Shin, Matthew Brian, Aaron Paar, and DJ Ala. He released Deep Delirium on Piston Recordings (Portugal) in August 2025, featuring a remix by Jaemus (Josh Jackson), and his catalog spans releases on Cool Contest Records, Calls and Puts Records, and reflectionsFM. He's also the co-creator of Core Affect with Hudson Cooper, combining modular synths and club-forward techno/house. Eric has played venues across SoCal including AC Lounge, OfficeBarSD, Songbird Speakeasy, Catch One / Union Nightclub, Heartbeat, The Brass Rail, and warehouse parties."
+  },
+  {
+    "name": "Michael Mapes",
+    "role": "Resident",
+    "photo": "assets/img/bios/michael_mapes.jpg",
+    "shortBio": "Founder of Tabby Traxx record label. DJing in San Diego since the heyday of the rave scene.",
+    "fullBio": "Michael Mapes is the founder of Tabby Traxx record label and has been DJing in San Diego since the heyday of the rave scene. San Diego's Tabby Traxx blends old school acid into new school tools, with releases that bring a lashing of acid madness over sci-fi tech drums. The label also features releases from Matthew Brian."
+  }
+]

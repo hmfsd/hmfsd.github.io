@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | House Music Fridays</title>
+  <meta name="description" content="House Music Fridays at Air Conditioned Lounge — San Diego's home for deep, jackin & soulful house every Friday night.">
+  <meta property="og:title" content="House Music Fridays">
+  <meta property="og:description" content="10 years of exceptional house music every Friday at Air Conditioned Lounge, San Diego.">
+  <meta property="og:image" content="assets/logos/hmf-logo.png">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .error-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+    .error-page__logo {
+      width: 80px;
+      height: auto;
+      margin-bottom: 2rem;
+      opacity: 0.6;
+    }
+    .error-page__code {
+      font-size: clamp(4rem, 12vw, 8rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: var(--text-primary);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .error-page__message {
+      font-size: 18px;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+    .error-page__link {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .error-page__link:hover {
+      color: var(--accent-hover);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="error-page">
+    <img src="assets/logos/hmf-logo.png" alt="House Music Fridays" class="error-page__logo">
+    <div class="error-page__code">404</div>
+    <p class="error-page__message">Page not found</p>
+    <a href="index.html" class="error-page__link">&larr; Back to Home</a>
+  </div>
+
+</body>
+</html>

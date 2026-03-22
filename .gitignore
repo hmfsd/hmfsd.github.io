@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+*.CR2
+*.cr2
+*.psd
+*.ai
+node_modules/
+.superpowers/

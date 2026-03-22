@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | House Music Fridays</title>
+  <meta name="description" content="House Music Fridays at Air Conditioned Lounge — San Diego's home for deep, jackin & soulful house every Friday night.">
+  <meta property="og:title" content="House Music Fridays">
+  <meta property="og:description" content="10 years of exceptional house music every Friday at Air Conditioned Lounge, San Diego.">
+  <meta property="og:image" content="assets/logos/hmf-logo.png">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="nav nav--solid">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/logos/ac-lounge-logo.png" alt="Air Conditioned Lounge">
+      <img src="assets/logos/hmf-logo.png" alt="HMF" class="nav__hmf-logo">
+    </a>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="about.html" class="nav__link active">About</a>
+      <a href="residents.html" class="nav__link">Residents</a>
+      <a href="guests.html" class="nav__link">Guest DJs</a>
+      <a href="events.html" class="nav__link">Events</a>
+      <a href="photos.html" class="nav__link">Photos</a>
+      <a href="mixes.html" class="nav__link">Mixes</a>
+      <a href="connect.html" class="nav__link">Connect</a>
+    
+    </div>
+    <button class="nav__hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__mobile">
+    <a href="index.html" class="nav__link">Home</a>
+    <a href="about.html" class="nav__link active">About</a>
+    <a href="residents.html" class="nav__link">Residents</a>
+    <a href="guests.html" class="nav__link">Guest DJs</a>
+    <a href="events.html" class="nav__link">Events</a>
+    <a href="photos.html" class="nav__link">Photos</a>
+    <a href="mixes.html" class="nav__link">Mixes</a>
+    <a href="connect.html" class="nav__link">Connect</a>
+  
+  </div>
+
+  <div id="residents-page">
+
+    <div class="page-header container">
+      <h1 class="page-header__title">About</h1>
+      <p class="page-header__subtitle">10 years of House Music in San Diego.</p>
+    </div>
+
+    <!-- HMF Description Card -->
+    <div class="section">
+      <div class="hmf-card card">
+        <img class="hmf-card__logo" src="assets/logos/hmf-logo.png" alt="HMF Logo" style="border-radius:8px;">
+        <div>
+          <h3 style="color:var(--text-primary);font-size:24px;font-weight:700;">House Music Fridays</h3>
+          <p style="color:var(--accent);font-size:18px;font-weight:500;margin-top:8px;">Every Friday · 9 PM – 2 AM · Air Conditioned Lounge</p>
+          <p style="color:var(--text-muted);font-size:14px;text-transform:uppercase;letter-spacing:0.06em;margin-top:6px;">Est. 2015 · San Diego, CA</p>
+          <p style="color:var(--text-body);font-size:17px;line-height:1.7;margin-top:14px;">For the last 10 years, House Music Fridays brings you exceptional talent every week in a venue where everyone's individuality is appreciated and encouraged. It is the only place for true House Music heads in San Diego to reside on Friday nights. Hosted weekly by veteran House DJ and producer Matthew Brian known for expertly mixing deep, jackin and soulful tunes. It's the place where the best up &amp; coming local artists perform alongside legendary house DJs like Grammy award winner Stacy Kidd, DJ Heather, Jesse Saunders, Gene Hunt, Tony Powell, Demarkus Lewis, and many more.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- AC Lounge Card -->
+    <div class="section">
+      <div class="hmf-card card">
+        <img class="hmf-card__logo" src="assets/logos/ac-lounge-logo.png" alt="Air Conditioned Lounge" style="border-radius:8px;">
+        <div>
+          <h3 style="color:var(--text-primary);font-size:24px;font-weight:700;">Air Conditioned Lounge</h3>
+          <p style="color:var(--text-muted);font-size:15px;text-transform:uppercase;letter-spacing:0.06em;margin-top:4px;">4673 30th Street · San Diego, CA 92116</p>
+          <p style="color:var(--text-body);font-size:17px;line-height:1.7;margin-top:14px;">Located in the heart of North Park between Adams Ave &amp; Madison Ave, the Air Conditioned Lounge is San Diego's home for House Music Fridays every week. A neighborhood bar with great sound, intimate vibes, and a dancefloor that brings people together.</p>
+          <p style="color:var(--accent);font-size:17px;font-weight:500;margin-top:12px;">619.501.9831 · Every Friday 9 PM – 2 AM</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Residents Section -->
+    <div class="section">
+      <p class="section__label">Residents</p>
+      <div id="residents-container" class="grid-2">
+        <!-- JS populates from data/residents.json -->
+      </div>
+    </div>
+
+    <!-- Guest DJs Section -->
+    <div class="section">
+      <p class="section__label">Guest DJs</p>
+      <div id="guests-container" class="grid-3">
+        <!-- JS populates from data/guests.json -->
+      </div>
+    </div>
+
+    <!-- Map -->
+    <div class="section">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.8!2d-117.1297!3d32.7698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d954e3b0d0b0b1%3A0x4e8c8c8c8c8c8c8c!2s4673+30th+St%2C+San+Diego%2C+CA+92116!5e0!3m2!1sen!2sus!4v1"
+        class="map-embed"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__info">
+        <img src="assets/logos/ac-lounge-logo.png" alt="Air Conditioned Lounge" style="height:20px;display:inline-block;vertical-align:middle;margin-right:8px;opacity:0.5;">
+        4673 30th St · San Diego, CA 92116 · Every Friday 9PM–2AM
+      </div>
+      <div class="footer__links">
+        <a href="https://instagram.com/housemusicfridays" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/og.matthewBrian" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://ra.co/promoters/160137" target="_blank" rel="noopener noreferrer">RA</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
