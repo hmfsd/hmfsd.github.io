@@ -35,6 +35,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -57,7 +58,7 @@ a:hover {
   color: var(--accent-hover);
 }
 
-img {
+img, video, iframe {
   display: block;
   max-width: 100%;
 }
@@ -1054,6 +1055,171 @@ button {
 
   .gallery__grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --- Small mobile (under 768px) --- */
+@media (max-width: 767px) {
+  /* Prevent any horizontal overflow */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Smaller hero logos on mobile */
+  .hero__logos img {
+    height: 50px !important;
+  }
+
+  .hero__title {
+    font-size: 1.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: 12px;
+  }
+
+  .hero__tagline-big {
+    font-size: 14px;
+  }
+
+  .hero__address {
+    font-size: 12px;
+  }
+
+  .hero__video-wrap {
+    max-width: 280px;
+  }
+
+  /* Event card stacks vertically on mobile */
+  .card--event {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card--event__flyer,
+  .upcoming-event__flyer {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+  }
+
+  .card--event__links {
+    flex-wrap: wrap;
+  }
+
+  /* Upcoming event on home page */
+  .upcoming-event .card--event {
+    flex-direction: column;
+  }
+
+  /* Buttons wrap on mobile */
+  .btn {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
+  /* Mini gallery stacks on mobile */
+  .mini-gallery {
+    flex-direction: column;
+  }
+
+  .mini-gallery__thumbs {
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+    gap: 6px;
+  }
+
+  .mini-gallery__thumb {
+    width: 70px;
+    height: 50px;
+    flex-shrink: 0;
+  }
+
+  /* Gallery preview smaller on mobile */
+  .gallery__preview {
+    max-width: 100%;
+  }
+
+  .gallery__preview-wrap {
+    max-width: 100%;
+  }
+
+  /* Gallery arrows smaller on mobile */
+  .gallery__arrow,
+  .gallery__arrow--prev,
+  .gallery__arrow--next {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  /* Flyer preview */
+  .gallery__preview--square {
+    max-width: 100%;
+  }
+
+  /* Section padding tighter */
+  .section {
+    padding: 1rem 1rem;
+  }
+
+  /* Nav logo smaller */
+  .nav__logo img {
+    height: 24px;
+  }
+
+  .nav__logo img.nav__hmf-logo {
+    height: 28px;
+  }
+
+  .nav {
+    padding: 14px 16px;
+  }
+
+  /* Footer stacks */
+  .footer__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer__info {
+    flex-direction: column;
+    font-size: 13px;
+    gap: 8px;
+  }
+
+  .footer__links {
+    font-size: 15px;
+    justify-content: center;
+  }
+
+  /* Connect grid stacks */
+  .connect-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Page header */
+  .page-header {
+    padding-top: 70px;
+  }
+
+  /* Bio photos smaller on mobile */
+  .card--bio__photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* HMF card logo smaller */
+  .hmf-card__logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .hmf-card {
+    padding: 20px;
+    gap: 16px;
   }
 }
 
