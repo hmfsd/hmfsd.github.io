@@ -18,10 +18,22 @@
     "bio": "Gene Hunt is truly one of Chicago's pioneers in house music since the early 80s, moving and educating crowds for over 25 years. He has played at legendary venues including The Music Box, Smart Bar, Metro, the Mid, and internationally at Dimensions Festival in Croatia, Field Maneuvers in Oxford, and venues across the UK and Scotland. Gene has worked with some of the heaviest hitters in the game — Ron Hardy, Frankie Knuckles, Farley Jack Master Funk, and Kenny Dope. His first EP \"Living in the Land\" was released on Traxx in 1987, followed by releases on Djax, Rush Hour, and many more."
   },
   {
+    "name": "Wayne Williams",
+    "credential": "Chicago House DJ Legend · Grammy Award Winner",
+    "photo": "assets/img/guests/wayne_williams.jpg",
+    "bio": "Wayne Williams is the man behind the music. Over 35 years ago, he started on a journey of sound, noted for bringing disco to the Southside of Chicago and quickly becoming a local celebrity. He built \"A Chosen Few\" — the top booked DJ company in the area — and went on to work for Trax Records and Jive Records, where he discovered and developed R. Kelly into a multi-platinum artist. Wayne's A&R credits include Aaliyah, Mystical, and Charlie Wilson, and he selected \"Toxic\" as Britney Spears' debut single. Annually, the Chosen Few Picnic draws over 30,000 people. He currently hosts \"Two Nations\" monthly in New York with Kenny Dope."
+  },
+  {
     "name": "DJ Heather",
     "credential": "Chicago House DJ Legend",
     "photo": "assets/img/guests/dj_heather.jpg",
     "bio": "DJ Heather is one of Chicago's most respected house music selectors, known for her versatility and deep connection with the dancefloor. She has held residencies at iconic venues including Smart Bar, The Mid, and Spybar, and performed alongside Derrick Carter, Mark Farina, DJ Sneak, and Diz. Her sets have taken her to festivals and clubs worldwide — from Winter Music Conference and Movement in Detroit to stages in London, Paris, Berlin, and Barcelona. A tireless champion of emerging talent, DJ Heather's dedication to the craft and the community has made her one of the premier selectors in the nation."
+  },
+  {
+    "name": "Diz",
+    "credential": "Chicago House DJ Legend",
+    "photo": "assets/img/guests/diz_washington.jpg",
+    "bio": "Born and raised in Chicago, Diz's adolescence coincided with the beginnings of the city's legendary house scene. At 14, his brother took him to The Music Box, where he witnessed the true potential of house music. He broke into the scene at 19 after meeting Mark Farina, Derrick Carter, and Gemini, holding residencies at Shelter and Red Dog alongside Johnny Fiasco. In 1995, he joined Chez Damier's Prescription Records and began producing with Joshua as Iz n Diz, releasing on Classic, Guidance, and Silver Network. Known for his insane DJ skills, stage presence, and warm-hearted personality."
   },
   {
     "name": "Miles Maeda",
@@ -30,10 +42,40 @@
     "bio": "Miles Maeda began as a college radio DJ in 1988. Moving to Chicago in the early 90's, he helped shape the rave and club scene, eventually holding his own 11-year residency at Smartbar. After moving to San Diego, he expanded his yoga and meditation work, traveling extensively and living in Tokyo for 7 years — giving birth to the eclectic ZenDaze party and the blossoming of Total M edits. Miles has recently moved back to Southern California to continue both his music productions and ongoing yoga education."
   },
   {
+    "name": "Hector Moralez",
+    "credential": "House DJ Legend",
+    "photo": "assets/img/guests/hector_moralez.jpg",
+    "bio": "Rising from Oakland, California, Hector Moralez has paid his dues working tirelessly from the bottom up. His ambitions began at age 17, spending hours practicing with vinyl from the infamous Primal Records. His sounds take influence from Latin, jazz, funk, hip hop, and soul, sewn together with grooving bass lines and solid fat beats. Releases on Music For Freaks, Robsoul, DJ Sneak Classics, and Magnetic, plus a debut album with Chris Carrier on Apollonia in 2013. Acclaimed by Derrick Carter, DJ Sneak, Doc Martin, Mark Farina, Diz, and DJ Heather."
+  },
+  {
     "name": "Wally Callerio",
     "credential": "West Coast House DJ Legend",
     "photo": "assets/img/guests/wally_callerio.jpg",
     "bio": "With over 20 years behind the decks and in the studio, Wally Callerio is no stranger to the world of house music. Part DJ, producer, and label mainstay, his accolades include over 100 original tracks and countless remixes released on over 40 labels internationally. Callerio's musical journey began in the early 90's on the West Coast — melodic vocals and chunky basslines remain the cornerstone of his sound, and his global following continues to grow organically along with him."
+  },
+  {
+    "name": "Pete Moss",
+    "credential": "House DJ Legend",
+    "photo": "assets/img/guests/pete_moss.jpg",
+    "bio": "Following his beginnings providing soundtracks for sunrises up and down the East Coast, Pete Moss settled in Philly alongside King Britt, Josh Wink, and the Ovum crew. He developed into one of dance music's finest talents with his late night sets and impeccable soulful production. From blowing minds at Ministry of Sound UK to shaking things up at Pacha Ibiza and fabric London, Pete has traveled the world more times than he can count. Releases on Dessous, Ovum, Nordic Trax, Plastic City, and his own Recline imprint."
+  },
+  {
+    "name": "Brett Johnson",
+    "credential": "House DJ Legend",
+    "photo": "assets/img/guests/brett_johnson.jpg",
+    "bio": "With influences ranging from early house and disco to turntablism and techno, Brett Johnson straddles the line between knowledgeable selector and genuine floor-filler. Releasing his first record in 1999, Brett has put out over 100 records and remixes for Crosstown Rebels, Classic Music Company, 20/20 Vision, Get Physical, Visionquest, Magnetic, Freerange, Cynosure, and F-Communications. His sound is best known as groovy, bumping house."
+  },
+  {
+    "name": "Kevin Yost",
+    "credential": "House DJ Legend",
+    "photo": "assets/img/guests/kevinyost.jpg",
+    "bio": "Ever since picking up drumsticks at age four, Kevin Yost has been obsessed with creating and performing music. In the mid 80s he discovered DJing and house music, and in 1998 broke through with his first album One Starry Night — considered a deep house classic. With close to 100 single releases, 8 albums, and nearly 1500 unreleased tracks, Kevin is known for playing all-original music sets and his \"Live & Improvised\" show where all music is created on the spot. Each gig is completely different, tailored live to take the crowd on a journey."
+  },
+  {
+    "name": "Lady Monix",
+    "credential": "House DJ Legend",
+    "photo": "",
+    "bio": "LADYMONIX is a Baltimore-native producer and DJ based in Detroit, known for turning out dancefloors with her deep disco and house sets. She's performed at Pittsburgh's Hot Mass, Brooklyn's House of Yes, and the darkest Detroit warehouse afterhours. Production credits include remixes, edits, and original work on her label Frizner Electric. Her 2019 EP 'Baby' earned \"Top Tune of the Month\" from DJ Mag, and she contributed an exclusive track to Detroit Love Vol. 3, curated by Waajeed on Planet E."
   },
   {
     "name": "Mark E. Quark",
