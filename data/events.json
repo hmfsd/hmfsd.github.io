@@ -13,7 +13,7 @@
     "dateISO": "2025-02-28",
     "date": "Friday, February 28",
     "venue": "Air Conditioned Lounge",
-    "flyer": "assets/img/flyers/stacykid square.jpg"
+    "flyer": "assets/img/flyers/stacykid_square.jpg"
   },
   {
     "title": "House Music Fridays",
@@ -41,7 +41,7 @@
     "dateISO": "2024-12-20",
     "date": "Friday, December 20",
     "venue": "Air Conditioned Lounge",
-    "flyer": "assets/img/flyers/image1 copy.jpg"
+    "flyer": "assets/img/flyers/image1_copy.jpg"
   },
   {
     "title": "House Music Fridays",
@@ -171,13 +171,6 @@
   },
   {
     "title": "House Music Fridays",
-    "dateISO": "2024-06-07",
-    "date": "Friday, June 7",
-    "venue": "Air Conditioned Lounge",
-    "flyer": "assets/img/flyers/image1_copy.jpg"
-  },
-  {
-    "title": "House Music Fridays",
     "dateISO": "2024-05-31",
     "date": "Friday, May 31",
     "venue": "Air Conditioned Lounge",
@@ -224,12 +217,5 @@
     "date": "Friday, April 19",
     "venue": "Air Conditioned Lounge",
     "flyer": "assets/img/flyers/sean_dexter.jpg"
-  },
-  {
-    "title": "House Music Fridays",
-    "dateISO": "2024-04-12",
-    "date": "Friday, April 12",
-    "venue": "Air Conditioned Lounge",
-    "flyer": "assets/img/flyers/stacykid_square.jpg"
   }
 ]
