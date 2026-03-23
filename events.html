@@ -70,6 +70,54 @@
       </div>
     </div>
 
+    <!-- Email List Signup -->
+    <div class="section--alt">
+      <div class="section fade-in" style="text-align:center;">
+        <p class="section__label">Join the List</p>
+        <p style="color:var(--text-body);font-size:16px;margin-bottom:20px;">Get notified about upcoming events and special guests.</p>
+        <form id="email-signup" style="max-width:500px;margin:0 auto;display:flex;flex-direction:column;gap:12px;">
+          <input type="text" id="signup-name" placeholder="Your name" required
+            style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:14px 18px;font-size:16px;color:var(--text-primary);font-family:inherit;outline:none;">
+          <input type="email" id="signup-email" placeholder="Your email" required
+            style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:14px 18px;font-size:16px;color:var(--text-primary);font-family:inherit;outline:none;">
+          <button type="submit" class="btn" style="width:100%;justify-content:center;font-size:16px;font-weight:600;padding:14px;">Sign Up</button>
+          <p id="signup-msg" style="display:none;font-size:14px;margin-top:4px;"></p>
+        </form>
+        <script>
+          document.getElementById('email-signup').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('signup-name').value.trim();
+            const email = document.getElementById('signup-email').value.trim();
+            const msg = document.getElementById('signup-msg');
+            const btn = this.querySelector('button');
+            if (!name || !email) return;
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            const url = 'https://docs.google.com/forms/d/e/1FAIpQLScz7_uxihDpYcLDZgiRwHGvA7FU0_AicRPHtonQTWwwM5RbDw/formResponse';
+            const data = new URLSearchParams();
+            data.append('entry.916462060', name);
+            data.append('emailAddress', email);
+            fetch(url, { method: 'POST', mode: 'no-cors', body: data })
+              .then(() => {
+                msg.style.display = 'block';
+                msg.style.color = 'var(--accent)';
+                msg.textContent = "You're on the list! See you on the dancefloor.";
+                this.reset();
+                btn.textContent = 'Sign Up';
+                btn.disabled = false;
+              })
+              .catch(() => {
+                msg.style.display = 'block';
+                msg.style.color = '#e55';
+                msg.textContent = 'Something went wrong. Try again.';
+                btn.textContent = 'Sign Up';
+                btn.disabled = false;
+              });
+          });
+        </script>
+      </div>
+    </div>
+
     <!-- Past Events -->
     <div class="section--alt">
       <div class="section">
@@ -87,54 +135,6 @@
       </div>
     </div>
 
-  </div>
-
-  <!-- Email List Signup -->
-  <div class="section--alt">
-    <div class="section fade-in" style="text-align:center;">
-      <p class="section__label">Join the List</p>
-      <p style="color:var(--text-body);font-size:16px;margin-bottom:20px;">Get notified about upcoming events and special guests.</p>
-      <form id="email-signup" style="max-width:500px;margin:0 auto;display:flex;flex-direction:column;gap:12px;">
-        <input type="text" id="signup-name" placeholder="Your name" required
-          style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:14px 18px;font-size:16px;color:var(--text-primary);font-family:inherit;outline:none;">
-        <input type="email" id="signup-email" placeholder="Your email" required
-          style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:14px 18px;font-size:16px;color:var(--text-primary);font-family:inherit;outline:none;">
-        <button type="submit" class="btn" style="width:100%;justify-content:center;font-size:16px;font-weight:600;padding:14px;">Sign Up</button>
-        <p id="signup-msg" style="display:none;font-size:14px;margin-top:4px;"></p>
-      </form>
-      <script>
-        document.getElementById('email-signup').addEventListener('submit', function(e) {
-          e.preventDefault();
-          const name = document.getElementById('signup-name').value.trim();
-          const email = document.getElementById('signup-email').value.trim();
-          const msg = document.getElementById('signup-msg');
-          const btn = this.querySelector('button');
-          if (!name || !email) return;
-          btn.textContent = 'Sending...';
-          btn.disabled = true;
-          const url = 'https://docs.google.com/forms/d/e/1FAIpQLScz7_uxihDpYcLDZgiRwHGvA7FU0_AicRPHtonQTWwwM5RbDw/formResponse';
-          const data = new URLSearchParams();
-          data.append('entry.916462060', name);
-          data.append('emailAddress', email);
-          fetch(url, { method: 'POST', mode: 'no-cors', body: data })
-            .then(() => {
-              msg.style.display = 'block';
-              msg.style.color = 'var(--accent)';
-              msg.textContent = "You're on the list! See you on the dancefloor.";
-              this.reset();
-              btn.textContent = 'Sign Up';
-              btn.disabled = false;
-            })
-            .catch(() => {
-              msg.style.display = 'block';
-              msg.style.color = '#e55';
-              msg.textContent = 'Something went wrong. Try again.';
-              btn.textContent = 'Sign Up';
-              btn.disabled = false;
-            });
-        });
-      </script>
-    </div>
   </div>
 
   <!-- Footer -->
