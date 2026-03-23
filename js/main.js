@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderGuestCard(guest) {
     return `
       <div class="card card--guest fade-in">
-        <img class="card--guest__photo" src="${guest.photo}" alt="${guest.name}" loading="lazy" />
+        ${guest.photo ? `<img class="card--guest__photo" src="${guest.photo}" alt="${guest.name}" loading="lazy" />` : `<div class="card--guest__photo" style="background:var(--bg-hover);display:flex;align-items:center;justify-content:center;color:var(--text-faint);font-size:24px;font-weight:700;">${guest.name.charAt(0)}</div>`}
         <div class="card--guest__content">
           <h3 class="card--guest__name">${guest.name}</h3>
           ${guest.credential ? guest.credential.split(' · ').map(c => `<p class="card--guest__credential">${c}</p>`).join('') : ''}
