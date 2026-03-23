@@ -217,5 +217,12 @@
     "date": "Friday, April 19",
     "venue": "Air Conditioned Lounge",
     "flyer": "assets/img/flyers/sean_dexter.jpg"
+  },
+  {
+    "title": "House Music Fridays",
+    "dateISO": "2024-04-05",
+    "date": "Friday, April 5",
+    "venue": "Air Conditioned Lounge",
+    "flyer": "assets/img/flyers/467433131_18077775211567715_7880145693755920189_n.jpg"
   }
 ]
