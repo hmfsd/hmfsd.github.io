@@ -1,5 +1,23 @@
 [
   {
+    "title": "House Music Fridays: Matthew Brian, Jam Candy + Eric Leonardis",
+    "dateISO": "2026-04-03",
+    "date": "Friday, April 3",
+    "venue": "Air Conditioned Lounge",
+    "facebook": "https://www.facebook.com/events/950412430724105/",
+    "ra": "https://ra.co/events/2405120",
+    "flyer": "assets/img/flyers/jamcandy_square.jpg"
+  },
+  {
+    "title": "House Music Fridays Goes Tropical: Ben Annand (OR), DJ Dazy (LA) + Vett Aluv (ALBQ)",
+    "dateISO": "2026-05-01",
+    "date": "Friday, May 1",
+    "venue": "Air Conditioned Lounge",
+    "facebook": "https://www.facebook.com/events/1461511182338086/",
+    "ra": "https://ra.co/events/2404797",
+    "flyer": "assets/img/flyers/hmf_tropical_square.jpg"
+  },
+  {
     "title": "House Music Fridays: Tony Powell B2B Matthew Brian",
     "dateISO": "2026-03-27",
     "date": "Friday, March 27",

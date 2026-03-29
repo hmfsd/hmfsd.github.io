@@ -123,49 +123,17 @@ document.addEventListener('DOMContentLoaded', () => {
      ---------------------------------------------------------- */
 
   async function initHomePage() {
-    // Load and display upcoming event
+    // Load and display up to 3 upcoming events
     try {
       const events = await fetchJSON('data/events.json');
-      const upcoming = events.find((ev) => isUpcoming(ev.dateISO));
-      const upcomingSection = document.querySelector('.upcoming-event');
+      const upcoming = events.filter((ev) => isUpcoming(ev.dateISO)).slice(0, 3);
+      const upcomingSection = document.getElementById('upcoming-events');
 
-      if (upcoming && upcomingSection) {
-        const title = upcomingSection.querySelector('.upcoming-event__title');
-        const date = upcomingSection.querySelector('.upcoming-event__date');
-        const venue = upcomingSection.querySelector('.upcoming-event__venue');
-        const flyer = upcomingSection.querySelector('.upcoming-event__flyer');
-        const fbLink = upcomingSection.querySelector('.upcoming-event__fb');
-        const raLink = upcomingSection.querySelector('.upcoming-event__ra');
-
-        if (title) title.textContent = upcoming.title;
-        if (date) date.textContent = upcoming.date;
-        if (venue) venue.textContent = upcoming.venue;
-        if (flyer) {
-          flyer.src = upcoming.flyer;
-          flyer.alt = `Flyer for ${upcoming.title}`;
-        }
-
-        // Show/hide social links
-        if (fbLink) {
-          if (upcoming.facebook) {
-            fbLink.href = upcoming.facebook;
-            fbLink.style.display = '';
-          } else {
-            fbLink.style.display = 'none';
-          }
-        }
-        if (raLink) {
-          if (upcoming.ra) {
-            raLink.href = upcoming.ra;
-            raLink.style.display = '';
-          } else {
-            raLink.style.display = 'none';
-          }
-        }
-
+      if (upcoming.length > 0 && upcomingSection) {
+        upcomingSection.innerHTML = upcoming.map((ev) => renderEventCard(ev)).join('');
         upcomingSection.style.display = '';
+        observeNewFadeIns(upcomingSection);
       } else if (upcomingSection) {
-        // No upcoming events — hide the section
         upcomingSection.style.display = 'none';
       }
     } catch (err) {
