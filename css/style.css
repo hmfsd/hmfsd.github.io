@@ -534,6 +534,66 @@ button {
   color: var(--text-dim);
 }
 
+/* Blog card */
+.card--blog {
+  padding: 0;
+  overflow: hidden;
+}
+
+.card--blog__image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.card--blog__content {
+  padding: 24px 28px;
+}
+
+.card--blog__date {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+}
+
+.card--blog__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.card--blog__excerpt {
+  font-size: 16px;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+.card--blog__body {
+  font-size: 16px;
+  color: var(--text-body);
+  line-height: 1.7;
+  margin-top: 8px;
+}
+
+.card--blog__toggle {
+  font-size: 14px;
+  color: var(--accent);
+  cursor: pointer;
+  margin-top: 12px;
+  background: none;
+  border: none;
+  font-family: inherit;
+  padding: 0;
+}
+
+.card--blog__toggle:hover {
+  color: var(--accent-hover);
+}
+
 /* Explore card */
 .card--explore {
   text-align: center;
