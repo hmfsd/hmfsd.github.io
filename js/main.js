@@ -383,29 +383,39 @@ document.addEventListener('DOMContentLoaded', () => {
      ---------------------------------------------------------- */
 
   function renderBlogPost(post) {
+    const authorLine = post.author ? `<p class="card--blog__author">By ${post.author}</p>` : '';
+    const bodyImage = post.image ? `<img class="card--blog__body-image" src="${post.image}" alt="${post.title}" />` : '';
     return `
-      <div class="card card--blog fade-in" style="margin-bottom:16px;">
+      <div class="card card--blog fade-in">
         ${post.image ? `<img class="card--blog__image" src="${post.image}" alt="${post.title}" loading="lazy" />` : ''}
         <div class="card--blog__content">
-          <p class="card--blog__date">${post.date}</p>
           <h3 class="card--blog__title">${post.title}</h3>
+          ${authorLine}
+          <p class="card--blog__date">${post.date}</p>
           <p class="card--blog__excerpt">${post.excerpt}</p>
           <div class="card--blog__body" style="display:none;">
+            ${bodyImage}
             <p>${post.body}</p>
           </div>
           <button class="card--blog__toggle" onclick="
+            const card = this.closest('.card--blog');
             const body = this.previousElementSibling;
             const excerpt = this.previousElementSibling.previousElementSibling;
+            const thumb = card.querySelector('.card--blog__image');
             if (body.style.display === 'none') {
               body.style.display = 'block';
               excerpt.style.display = 'none';
-              this.textContent = 'Close ↑';
+              if (thumb) thumb.style.display = 'none';
+              card.classList.add('expanded');
+              this.textContent = 'Close';
             } else {
               body.style.display = 'none';
               excerpt.style.display = 'block';
-              this.textContent = 'Read more ↓';
+              if (thumb) thumb.style.display = '';
+              card.classList.remove('expanded');
+              this.textContent = 'Read more';
             }
-          ">Read more ↓</button>
+          ">Read more</button>
         </div>
       </div>
     `;
