@@ -18,6 +18,24 @@
     "flyer": "assets/img/flyers/henrydiaz_square.png"
   },
   {
+    "title": "House Music Fridays: Mr. Bold, Brian SD + Dathanna",
+    "dateISO": "2026-04-17",
+    "date": "Friday, April 17",
+    "venue": "Air Conditioned Lounge",
+    "facebook": "https://www.facebook.com/events/963025449543518",
+    "ra": "https://ra.co/events/2417658",
+    "flyer": "assets/img/flyers/hmf_mrbold_briansd_dathanna_square.png"
+  },
+  {
+    "title": "House Music Fridays: Brian Epstein + Matthew Brian",
+    "dateISO": "2026-04-24",
+    "date": "Friday, April 24",
+    "venue": "Air Conditioned Lounge",
+    "facebook": "https://www.facebook.com/events/2009701496287744",
+    "ra": "https://ra.co/events/2417664",
+    "flyer": "assets/img/flyers/brian_epstein_square.png"
+  },
+  {
     "title": "House Music Fridays Goes Tropical: Ben Annand (OR), DJ Dazy (LA) + Vett Aluv (ALBQ)",
     "dateISO": "2026-05-01",
     "date": "Friday, May 1",
