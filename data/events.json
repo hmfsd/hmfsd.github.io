@@ -6,7 +6,8 @@
     "venue": "Air Conditioned Lounge",
     "facebook": "https://www.facebook.com/events/1461511182338086/",
     "ra": "https://ra.co/events/2404797",
-    "flyer": "assets/img/flyers/hmf_tropical_square.png"
+    "flyer": "assets/img/flyers/hmf_tropical_square.png",
+    "featured": true
   },
   {
     "title": "House Music Fridays: Matthew Brian, Jam Candy + Eric Leonardis",
