@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const events = await fetchJSON('data/events.json');
       const allUpcoming = events.filter((ev) => isUpcoming(ev.dateISO));
       const featured = allUpcoming.filter((ev) => ev.featured);
-      const upcoming = allUpcoming.filter((ev) => !ev.featured).slice(0, 3);
+      const upcoming = allUpcoming.slice(0, 3);
 
       const featuredSection = document.getElementById('featured-section');
       const featuredContainer = document.getElementById('featured-events');
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const allUpcoming = events.filter((ev) => isUpcoming(ev.dateISO));
       const featured = allUpcoming.filter((ev) => ev.featured);
-      const upcoming = allUpcoming.filter((ev) => !ev.featured);
+      const upcoming = allUpcoming;
       const past = events.filter((ev) => !isUpcoming(ev.dateISO));
 
       // Render featured events
