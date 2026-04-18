@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load and display featured + upcoming events
     try {
       const events = await fetchJSON('data/events.json');
-      const allUpcoming = events.filter((ev) => isUpcoming(ev.dateISO));
+      const allUpcoming = events.filter((ev) => isUpcoming(ev.dateISO)).sort((a, b) => a.dateISO.localeCompare(b.dateISO));
       const featured = allUpcoming.filter((ev) => ev.featured);
       const upcoming = allUpcoming.slice(0, 3);
 
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       const events = await fetchJSON('data/events.json');
 
-      const allUpcoming = events.filter((ev) => isUpcoming(ev.dateISO));
+      const allUpcoming = events.filter((ev) => isUpcoming(ev.dateISO)).sort((a, b) => a.dateISO.localeCompare(b.dateISO));
       const featured = allUpcoming.filter((ev) => ev.featured);
       const upcoming = allUpcoming;
       const past = events.filter((ev) => !isUpcoming(ev.dateISO));
