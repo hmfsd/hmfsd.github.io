@@ -288,10 +288,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderEventCard(event) {
     const links = [];
     const fbIcon = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px;flex-shrink:0;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>`;
-    const raIcon = `<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px;flex-shrink:0;"><text x="2" y="17" font-size="14" font-weight="700" font-family="Arial,sans-serif">RA</text></svg>`;
-    const ticketIcon = `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px;flex-shrink:0;"><path d="M22 10V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v4a2 2 0 0 1 0 4v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 1 0-4zM13 17.5h-2v-2h2v2zm0-4.5h-2v-2h2v2zm0-4.5h-2v-2h2v2z"/></svg>`;
+    const raIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right:4px;flex-shrink:0;"><text x="2" y="17" font-size="14" font-weight="700" font-family="Arial,sans-serif">RA</text></svg>`;
+    const ticketIcon = `<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-right:4px;flex-shrink:0;"><path d="M22 10V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v4a2 2 0 0 1 0 4v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 1 0-4zM13 17.5h-2v-2h2v2zm0-4.5h-2v-2h2v2zm0-4.5h-2v-2h2v2z"/></svg>`;
     if (event.ra) {
-      links.push(`<a href="${event.ra}" class="btn btn--ra-primary" target="_blank" rel="noopener noreferrer">${raIcon}${ticketIcon}Resident Advisor (Buy Tickets)</a>`);
+      links.push(`<a href="${event.ra}" class="btn btn--ra-primary" target="_blank" rel="noopener noreferrer"><span class="ra-top">${ticketIcon}${raIcon}Resident Advisor</span><span class="ra-subtitle">(Buy Tickets)</span></a>`);
     }
     if (event.facebook) {
       links.push(`<a href="${event.facebook}" class="btn btn--outline" target="_blank" rel="noopener noreferrer">${fbIcon}Facebook Event</a>`);
