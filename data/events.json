@@ -1,5 +1,24 @@
 [
   {
+    "title": "House Music Fridays: Matthew Brian, Noyze Komplaynt + Trev Muello",
+    "dateISO": "2026-05-08",
+    "date": "Friday, May 8",
+    "venue": "Air Conditioned Lounge",
+    "facebook": "https://www.facebook.com/events/1762234235184403",
+    "ra": "https://ra.co/events/2435488",
+    "flyer": "assets/img/flyers/trev_square_final.jpeg",
+    "featured": true
+  },
+  {
+    "title": "House Music Fridays: Bruno Browning, Matthew Brian + Eric Leonardis",
+    "dateISO": "2026-05-15",
+    "date": "Friday, May 15",
+    "venue": "Air Conditioned Lounge",
+    "facebook": "https://www.facebook.com/events/26653033527640862",
+    "ra": "https://ra.co/events/2435460",
+    "flyer": "assets/img/flyers/bruno_square.png"
+  },
+  {
     "title": "House Music Fridays Goes Tropical: Ben Annand (OR), DJ Dazy (LA) + Vettaluv (ALBQ)",
     "dateISO": "2026-05-01",
     "date": "Friday, May 1",
@@ -7,8 +26,7 @@
     "facebook": "https://www.facebook.com/events/1461511182338086/",
     "ra": "https://ra.co/events/2404797",
     "ticketWebsite": "https://hmf.aclounge.club/",
-    "flyer": "assets/img/flyers/hmf_tropical_square.png",
-    "featured": true
+    "flyer": "assets/img/flyers/hmf_tropical_square.png"
   },
   {
     "title": "House Music Fridays: Matthew Brian, Jam Candy + Eric Leonardis",
