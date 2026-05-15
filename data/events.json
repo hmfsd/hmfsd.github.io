@@ -1,5 +1,16 @@
 [
   {
+    "title": "House Music Fridays: DJ Heather (Chicago) - Soulsupplement 20th Anniversary Party",
+    "dateISO": "2026-06-12",
+    "date": "Friday, June 12",
+    "venue": "Air Conditioned Lounge",
+    "facebook": "https://www.facebook.com/events/1021046413583363",
+    "ra": "https://ra.co/events/2442750",
+    "ticketWebsite": "https://hmf.aclounge.club/DJHeather",
+    "flyer": "assets/img/flyers/heather_square.png",
+    "featured": true
+  },
+  {
     "title": "House Music Fridays: Matthew Brian, Noyze Komplaynt + Trev Muello",
     "dateISO": "2026-05-08",
     "date": "Friday, May 8",
@@ -15,8 +26,7 @@
     "venue": "Air Conditioned Lounge",
     "facebook": "https://www.facebook.com/events/26653033527640862",
     "ra": "https://ra.co/events/2435460",
-    "flyer": "assets/img/flyers/bruno_square.png",
-    "featured": true
+    "flyer": "assets/img/flyers/bruno_square.png"
   },
   {
     "title": "House Music Fridays Goes Tropical: Ben Annand (OR), DJ Dazy (LA) + Vettaluv (ALBQ)",
