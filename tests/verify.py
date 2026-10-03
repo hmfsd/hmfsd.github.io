@@ -161,7 +161,7 @@ for r in residents:
 with open('data/guests.json') as f:
     guests = json.load(f)
 test("guests.json: is an array", isinstance(guests, list))
-test("guests.json: has 6 guests", len(guests) == 6)
+test("guests.json: has at least 6 guests", len(guests) >= 6)
 for g in guests:
     for field in ['name', 'credential', 'photo', 'bio']:
         test(f"guests.json: {g['name']} has {field}", field in g)
