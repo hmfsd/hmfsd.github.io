@@ -1,5 +1,16 @@
 [
   {
+    "title": "House Music Fridays 11th Anniversary: Colette (Chicago/LA)",
+    "dateISO": "2026-11-13",
+    "date": "Friday, November 13",
+    "venue": "Air Conditioned Lounge",
+    "facebook": "https://www.facebook.com/events/1924287428534047",
+    "ra": "https://ra.co/events/2557969",
+    "ticketWebsite": "https://eventsta.com/event/colette-hmf",
+    "flyer": "assets/img/flyers/colette_11th_anniversary_nov13_square.jpg",
+    "featured": true
+  },
+  {
     "title": "House Music Fridays Halloween: Mark E Quark + Costume Contest",
     "dateISO": "2026-10-30",
     "date": "Friday, October 30",
